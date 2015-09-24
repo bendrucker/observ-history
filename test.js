@@ -20,17 +20,18 @@ test('history (browser)', function (t) {
 
   var window = new EventTarget()
   var document = {
-    title: 'the title',
-    location: {
-      pathname: '/the/popped/path'
-    }
+    title: 'the title'
   }
+
   window.history = {
     pushState: pushState
   }
   var history = proxyquire('./', {
     'global/window': window,
-    'global/document': document
+    'global/document': document,
+    'document-pathname': function () {
+      return '/the/popped/path'
+    }
   })
 
   history.set('/the/pushed/path')
