@@ -1,0 +1,35 @@
+{
+  "name": "observ-history",
+  "main": "index.js",
+  "version": "0.0.0",
+  "description": "Observable interface to the browser history API",
+  "license": "MIT",
+  "repository": "bendrucker/observ-history",
+  "author": {
+    "name": "Ben Drucker",
+    "email": "bvdrucker@gmail.com",
+    "url": "bendrucker.me"
+  },
+  "scripts": {
+    "test": "standard && tape test.js"
+  },
+  "keywords": [
+    "observ",
+    "observable",
+    "history",
+    "browser"
+  ],
+  "devDependencies": {
+    "dom-event-target": "~1.0.0",
+    "proxyquire": "~1.7.2",
+    "standard": "^4.0.0",
+    "tape": "^4.0.0"
+  },
+  "files": [
+    "index.js"
+  ],
+  "dependencies": {
+    "geval": "~2.1.1",
+    "global": "~4.3.0"
+  }
+}
