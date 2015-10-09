@@ -5,6 +5,7 @@ var document = require('global/document')
 var history = window.history
 var Event = require('geval')
 var path = require('document-pathname')
+var popState = require('popstate')
 
 module.exports = History()
 
@@ -21,10 +22,9 @@ function History () {
 
 function PopState () {
   return !history ? noop : Event(function (broadcast) {
-    window.addEventListener('popstate', onPopState)
-    function onPopState () {
+    popState(function onPopState () {
       broadcast(path())
-    }
+    })
   })
 }
 

@@ -26,11 +26,15 @@ test('history (browser)', function (t) {
   window.history = {
     pushState: pushState
   }
+  var pop
   var history = proxyquire('./', {
     'global/window': window,
     'global/document': document,
     'document-pathname': function () {
       return '/the/popped/path'
+    },
+    popstate: function (callback) {
+      pop = callback
     }
   })
 
@@ -43,8 +47,8 @@ test('history (browser)', function (t) {
   }
 
   history(onPopState)
+  pop()
 
-  window.send('popstate')
   function onPopState (path) {
     t.equal(path, '/the/popped/path')
   }
