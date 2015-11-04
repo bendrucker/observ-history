@@ -29,7 +29,7 @@
     "index.js"
   ],
   "dependencies": {
-    "document-pathname": "~1.0.0",
+    "document-pathname": "~2.0.0",
     "geval": "~2.1.1",
     "global": "~4.3.0",
     "popstate": "~1.0.0"
