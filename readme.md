@@ -1,4 +1,4 @@
-# observ-history [![Build Status](https://travis-ci.org/bendrucker/observ-history.svg?branch=master)](https://travis-ci.org/bendrucker/observ-history)
+# observ-history [![Build Status](https://travis-ci.org/bendrucker/observ-history.svg?branch=master)](https://travis-ci.org/bendrucker/observ-history) [![Greenkeeper badge](https://badges.greenkeeper.io/bendrucker/observ-history.svg)](https://greenkeeper.io/)
 
 > Observable interface to the browser history API
 
